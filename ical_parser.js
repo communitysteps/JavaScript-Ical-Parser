@@ -143,9 +143,9 @@ function ical_parser(feed_url, callback, onerror, xmlHttpParams){
 					val = dt.date;
 					//These are helpful for display
 					cur_event.start_time = dt.hour+':'+dt.minute;
-					cur_event.start_date = dt.day+'/'+dt.month+'/'+dt.year;
+					cur_event.start_date = dt.month+'/'+dt.day+'/'+dt.year;
 					cur_event.day = dt.dayname;
-                    cur_event.start_date_long = dt.day+'. '+dt.monthname+' '+dt.year ;
+                    cur_event.start_date_long = dt.monthname+'. '+dt.day+' '+dt.year ;
 				}
 				//If the type is an end date, do the same as above
         else if(type =='DTEND' || type == 'DTEND;VALUE=DATE' || type == 'DTSTART;VALUE=DATE-TIME') {
@@ -157,7 +157,7 @@ function ical_parser(feed_url, callback, onerror, xmlHttpParams){
 					val = dt.date;
 					//These are helpful for display
 					cur_event.end_time = dt.hour+':'+dt.minute;
-					cur_event.end_date = dt.day+'/'+dt.month+'/'+dt.year;
+					cur_event.end_date = dt.month+'/'+dt.day+'/'+dt.year;
 					cur_event.day = dt.dayname;
 				}
 				//Convert timestamp
