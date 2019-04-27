@@ -26,8 +26,9 @@
 					//Create a list item
 					var li = document.createElement('li');
 					//Add details from cal file.
-					li.innerHTML = '<strong>' +event.SUMMARY + '</strong><br/> ' +
-					event.day + ': ' +event.start_time + ' - ' + event.end_time + ' ('+event.start_date+ ')' ;
+					li.innerHTML = event.day + ': ' +event.start_time + ' - ' + event.end_time + ' ('+event.start_date+ ')' +
+					'<br/> ' + '<strong>' +event.SUMMARY + '</strong><br/> ' +
+                                        event.DESCRIPTION + '<br/> ' +event.LOCATION + '<br/> ' ;
 					//Add list item to list.
 					document.getElementById('calendar').appendChild(li);	
 				});
